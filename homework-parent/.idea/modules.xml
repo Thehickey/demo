@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/homework-one/homework-one.iml" filepath="$PROJECT_DIR$/homework-one/homework-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework-parent.iml" filepath="$PROJECT_DIR$/homework-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework-three/homework-three.iml" filepath="$PROJECT_DIR$/homework-three/homework-three.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework-two/homework-two.iml" filepath="$PROJECT_DIR$/homework-two/homework-two.iml" />
+    </modules>
+  </component>
+</project>

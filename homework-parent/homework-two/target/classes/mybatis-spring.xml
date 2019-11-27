@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <bean id="dept" class="com.Dept"></bean>
+
+    <bean id="deptDao" class="com.DeptDaoImpl">
+        <property name="queryRunner" ref="queryRunner"></property>
+    </bean>
+
+    <bean id="deptService" class="com.DeptServiceImpl">
+        <property name="dao" ref="deptDao"/>
+     </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/demo?useSSL=false&amp;serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+<!--        <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+    </bean>
+
+    <bean id="queryRunner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+        <constructor-arg name="pmdKnownBroken" value="true"></constructor-arg>
+    </bean>
+
+</beans>

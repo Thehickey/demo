@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-init-method="init">
+
+    <bean id="b" class="com.B"></bean>
+
+    <bean id="c" class="com.C"></bean>
+
+    <bean id="test" class="com.A" scope="singleton">
+<!--        <constructor-arg name="b" ref="b"></constructor-arg>-->
+<!--        <constructor-arg name="c" ref="c"></constructor-arg>-->
+        <property name="b" ref="b"></property>
+        <property name="c" ref="c"></property>
+    </bean>
+</beans>
